@@ -30,8 +30,11 @@ step 3: Built the kernel by following the steps specified in the video. After pe
  ``` sudo bash  
    make INSTALL_MOD_STRIP=1 modules_install
    ```
-  
-  ![image](https://user-images.githubusercontent.com/38378122/205841844-46668f50-b0cb-4f03-8392-84179420113a.png)
+  ![2nd reg](https://user-images.githubusercontent.com/38378122/205847953-fe2cb229-78ce-4625-88f9-59f79a267be5.PNG)
+
+
+![2nd reg2](https://user-images.githubusercontent.com/38378122/205848003-066f212b-270a-4d75-9f34-fe8a3c826cd9.PNG)
+
 
 step 7: verify the KVM modules loaded if not load them 
 
