@@ -10,10 +10,12 @@ step 1: Created a Virtual Machine instance in Google Cloud Platform with 100 GB 
 
 step 2:  Forked the Git repository from https://github.com/torvalds/linux to my github account and cloned it into the GCP VM instance.   
 
-```git clone https://github.com/saisankethravva/linux ```
+```
+git clone https://github.com/saisankethravva/linux 
+```
 
 step 3: Built the kernel by following the steps specified in the video. After performing all the steps- The new kernel version is booted.   
    
-``` saisanketh_ravva@cmpe283:~$ uname -a  
-         Linux cmpe283 6.1.0-rc7+ #1 SMP PREEMPT_DYNAMIC Sun Dec  4 13:11:44 UTC 2022 x86_64 GNU/Linux ```
+``` saisanketh_ravva@cmpe283:~$ uname -a Linux cmpe283 6.1.0-rc7+ #1 SMP PREEMPT_DYNAMIC Sun Dec  4 13:11:44 UTC 2022 x86_64 GNU/Linux 
+ ```
 
