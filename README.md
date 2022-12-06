@@ -1,10 +1,10 @@
 # CMPE 283 Assignment 2
 
 
-##Question 1:
+## Question 1:
 Assignment is done By myself.
 
-##Question 2: (Steps used to complete the assignment)
+## Question 2: (Steps used to complete the assignment)
 
 step 1: Created a Virtual Machine instance in Google Cloud Platform with 100 GB disk space and enabling nested Virtualization.  
 
