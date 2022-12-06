@@ -4,7 +4,7 @@
 ## Question 1:
 Assignment is done By myself.
 
-## Question 2: (Steps used to complete the assignment)
+## Question 2: (Step by step procedure to complete the assignment and test the functionality)
 
 step 1: Created a Virtual Machine instance in Google Cloud Platform with 100 GB disk space and enabling nested Virtualization.  
 
@@ -93,14 +93,14 @@ sudo apt-get update
 sudo apt-get install cpuid  
 ```
 
-step 12: To test the CPUID functionality for 0x4ffffffc lead node type below command in nested VM terminal
+step 12: To test the CPUID functionality for 0x4ffffffc lead node type below command in nested VM terminal multiple times
 
 ```
 sudo cpuid -l 0x4ffffffc
 ```
 ![fc2](https://user-images.githubusercontent.com/38378122/205846493-55acfeda-b512-4261-b7c5-505a8cd6fed9.PNG)
 
-In the GCP VM terminal type the below command to see output
+Now SSH into GCP VM terminal and give the below command to see output
 
 ```
 sudo dmesg
@@ -119,7 +119,7 @@ sudo cpuid -l 0x4ffffffd
 
 ![d2](https://user-images.githubusercontent.com/38378122/205847252-947eb261-7c7d-4181-8228-4311faa78dbe.PNG)
 
-In the GCP VM terminal type the below command to see output
+Now SSH into GCP VM terminal and give the below command to see output
 
 ```
 sudo dmesg
