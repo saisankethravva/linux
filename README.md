@@ -16,7 +16,8 @@ git clone https://github.com/saisankethravva/linux
 
 step 3: Built the kernel by following the steps specified in the video. After performing all the steps- The new kernel version is booted.   
    
-``` saisanketh_ravva@cmpe283:~$ uname -a Linux cmpe283 6.1.0-rc7+ #1 SMP PREEMPT_DYNAMIC Sun Dec  4 13:11:44 UTC 2022 x86_64 GNU/Linux 
+```
+uname -a Linux cmpe283 6.1.0-rc7+
  ```
  Step 4
 
