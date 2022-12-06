@@ -8,4 +8,8 @@ step 1: Created a Virtual Machine instance in Google Cloud Platform with 100 GB 
 ![image](https://user-images.githubusercontent.com/38378122/205823686-2e9011f3-e6cc-4e6f-b76b-6f02d31e9370.png)
 
 
-step 2: 
+step 2:  Forked the Git repository from https://github.com/torvalds/linux to my github account and cloned it into the GCP VM instance.   
+
+```git clone https://github.com/saisankethravva/linux ```
+
+
