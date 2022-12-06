@@ -28,7 +28,23 @@ step 3: Built the kernel by following the steps specified in the video. After pe
  step 6: move to sudo bash to install modules
  
  ``` sudo bash  
-   make INSTALL_MOD_STRIP=1 modules_install  ```
+   make INSTALL_MOD_STRIP=1 modules_install
+   ```
+  
+  ![image](https://user-images.githubusercontent.com/38378122/205841844-46668f50-b0cb-4f03-8392-84179420113a.png)
+
+step 7: verify the KVM modules loaded if not load them 
+
+``` 
+  root@cmpe283:/home/saisanketh_ravva/linux# rmmod kvm_intel
+  root@cmpe283:/home/saisanketh_ravva/linux# rmmod kvm
+  root@cmpe283:/home/saisanketh_ravva/linux# modprobe kvm
+  root@cmpe283:/home/saisanketh_ravva/linux# modprobe kvm_intel
+  root@cmpe283:/home/saisanketh_ravva/linux# lsmod | grep kvm
+  kvm_intel             352256  2
+  kvm                  1126400  1 kvm_intel
+  irqbypass              16384  1 kvm
+```
    
    
   
