@@ -14,10 +14,22 @@ step 2:  Forked the Git repository from https://github.com/torvalds/linux to my 
 git clone https://github.com/saisankethravva/linux 
 ```
 
-step 3: Built the kernel by following the steps specified in the video. After performing all the steps- The new kernel version is booted.   
+step 3: Built the kernel by following the steps specified in the video. After performing all the steps- The new kernel version is booted.    
+
+
+![image](https://user-images.githubusercontent.com/38378122/205826065-4a79e5a4-dfc2-4dd5-8946-57d598aa6e17.png)
+
+ Step 4: move to cpuid.c and vmx.c files to make changes as per our assignment
+ 
+ step 5: move to linux folder and type the below command to build modules
+ 
+ ```  make -j 8 modules  ```
+ 
+ step 6: move to sudo bash to install modules
+ 
+ ``` sudo bash  
+   make INSTALL_MOD_STRIP=1 modules_install  ```
    
-```
-uname -a Linux cmpe283 6.1.0-rc7+
- ```
- Step 4
+   
+  
 
