@@ -1,4 +1,11 @@
 # CMPE 283 Assignment 2
 
-step 1: Created a Virtual Machine instance in Google Cloud Platform with enabling nested Virtualization.
+step 1: Created a Virtual Machine instance in Google Cloud Platform with 100 GB disk space and enabling nested Virtualization.  
 
+![image](https://user-images.githubusercontent.com/38378122/205823594-48fcb850-dffd-4473-beb3-da84d691a95a.png)  
+
+
+![image](https://user-images.githubusercontent.com/38378122/205823686-2e9011f3-e6cc-4e6f-b76b-6f02d31e9370.png)
+
+
+step 2: 
