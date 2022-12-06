@@ -68,7 +68,56 @@ step 8: if everything is loaded perfectly then we can test it by creating a VM u
     
 cloud-localds user-data.img user-data
 ```
- 
+
+step 10: execute the ubuntu image VM by using below command
+
+```
+sudo qemu-system-x86_64 -enable-kvm -hda bionic-server-cloudimg-amd64.img -drive "file=user-data.img,format=raw" -m 512 -curses -nographic
+```
+now you will be redirected to new terminal of VM  
+login to the VM by given password in user-data file
+
+step 11: To check the functionality, we need to install cpuid utility package by below command
+
+```
+sudo apt-get update  
+sudo apt-get install cpuid  
+```
+
+step 12: To test the CPUID functionality for 0x4ffffffc lead node type below command in nested VM terminal
+
+```
+sudo cpuid -l 0x4ffffffc
+```
+![fc2](https://user-images.githubusercontent.com/38378122/205846493-55acfeda-b512-4261-b7c5-505a8cd6fed9.PNG)
+
+In the GCP VM terminal type the below command to see output
+
+```
+sudo dmesg
+```
+
+
+![exits2](https://user-images.githubusercontent.com/38378122/205846915-2f941640-f260-42e4-b560-72cb397e1df4.PNG)
+
+
+step 13: To test the CPUID functionality for 0x4ffffffd lead node type below command in nested VM terminal
+
+```
+sudo cpuid -l 0x4ffffffd
+```
+
+
+![d2](https://user-images.githubusercontent.com/38378122/205847252-947eb261-7c7d-4181-8228-4311faa78dbe.PNG)
+
+In the GCP VM terminal type the below command to see output
+
+```
+sudo dmesg
+```
+![vmm2](https://user-images.githubusercontent.com/38378122/205847407-235d93e0-60dc-45c9-9b8c-3793bf26984f.PNG)
+
+
    
    
 
