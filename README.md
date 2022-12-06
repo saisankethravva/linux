@@ -84,7 +84,7 @@ step 10: execute the ubuntu image VM by using below command
 sudo qemu-system-x86_64 -enable-kvm -hda bionic-server-cloudimg-amd64.img -drive "file=user-data.img,format=raw" -m 512 -curses -nographic
 ```
 now you will be redirected to new terminal of VM  
-login to the VM by given password in user-data file
+login to the VM by username : ubuntu and password give in user-data file (in this case it is "sanketh")
 
 step 11: To check the functionality, we need to install cpuid utility package by below command
 
