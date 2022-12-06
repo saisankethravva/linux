@@ -54,7 +54,7 @@ step 7: verify the KVM modules loaded if not load them
   kvm                  1126400  1 kvm_intel
   irqbypass              16384  1 kvm
 ```
-step 8: if everything is loaded perfectly then we can test it by creating a VM upon the GCP VM follow the below steps
+step 8: if everything is loaded perfectly then we can test it by creating a nested VM upon the GCP VM, follow the below steps to
    Download the Ubuntu cloud image from this site (https://cloud-images.ubuntu.com/).
    ```
    sudo apt-get install wget
