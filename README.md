@@ -92,6 +92,47 @@ step 11: To check the functionality, we need to install cpuid utility package by
 sudo apt-get update  
 sudo apt-get install cpuid  
 ```
+step 12: Test the cpuid 0x4FFFFFFE and 0x4FFFFFFE using below script test_cpuid.sh.
+
+```
+#!/bin/bash
+
+for i in {0..76}
+do
+    echo "EXIT $i"
+    cpuid -l $1 -s $i
+done
+```
+
+step 13: to test cpuid 0x4FFFFFFE run below command
+
+```
+bash test_cpuid.sh 0x4ffffffe
+```
+ ![ffe nestedvm](https://user-images.githubusercontent.com/38378122/207184419-3f7a4f14-79f7-47f9-8a99-e9c0818c67ee.PNG)
+ 
+ run sudo dmesg in GCP VM terminal to see the output
+ 
+ ![ffe1](https://user-images.githubusercontent.com/38378122/207184616-06a71379-9954-47da-9e6b-cea26e93e9a2.PNG)
+
+
+![ffe2](https://user-images.githubusercontent.com/38378122/207184625-ff1861ac-2972-441e-80d6-2f21d17d2ad6.PNG)
+
+step 14: to test cpuid 0x4FFFFFFF run below command
+
+
+```
+bash test_cpuid.sh 0x4ffffffe
+```
+![ff nested vm](https://user-images.githubusercontent.com/38378122/207184925-dd6ae170-b937-4b95-b5c7-41d956e51087.PNG)
+
+run sudo dmesg in GCP VM terminal to see the output
+
+![ff1](https://user-images.githubusercontent.com/38378122/207185062-1ac99351-6a9b-418c-9227-b76a3bec65af.PNG)
+
+![ff2](https://user-images.githubusercontent.com/38378122/207185073-df1ffaa0-ba2b-42c1-ba17-3d9a4fd961bd.PNG)
+
+
 
 # CMPE 283 Assignment 2
 
