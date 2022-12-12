@@ -91,9 +91,8 @@ step 11: To check the functionality, we need to install cpuid utility package by
 ```
 sudo apt-get update  
 sudo apt-get install cpuid  
+```
 
-
-# CMPE 283 Assignment 3
 # CMPE 283 Assignment 2
 
 ## Question 1:
