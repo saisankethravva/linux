@@ -93,9 +93,7 @@ sudo apt-get update
 sudo apt-get install cpuid  
 
 
-
 # CMPE 283 Assignment 2
-
 
 ## Question 1:
 Assignment is done By myself.
