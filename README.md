@@ -133,6 +133,10 @@ run sudo dmesg in GCP VM terminal to see the output
 ![ff2](https://user-images.githubusercontent.com/38378122/207185073-df1ffaa0-ba2b-42c1-ba17-3d9a4fd961bd.PNG)
 
 
+##Question 3:
+Comment on the frequency of exits – does the number of exits increase at a stable rate? Or are there more exits performed during certain VM operations? Approximately how many exits does a full VM boot entail?
+
+
 
 # CMPE 283 Assignment 2
 
