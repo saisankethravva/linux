@@ -150,7 +150,7 @@ Of the exit types defined in the SDM, which are the most frequent? Least?
 
 The most Frequently called exit is Exit number- 30 (IO_INSTRUCTION). Total exits count=898930  
 The least Frequently called exit is Exit number- 29 ( DR_ACCESS). Total exits count=1, Ofcourse there are some exit reasons with Zero count too.  
-example exit reasons from 13 to 24.
+example exit reasons from 13 to 27.
 
 
 
