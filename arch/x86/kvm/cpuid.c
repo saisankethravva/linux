@@ -32,10 +32,10 @@ EXPORT_SYMBOL(total_exits);
 u64 total_proc_cycles_time = 0;
 EXPORT_SYMBOL(total_proc_cycles_time);
 
-s64 each_exit_reason_count[70];
+s64 each_exit_reason_count[71];
 EXPORT_SYMBOL(each_exit_reason_count);
 
-u64 eachexit_proc_cycles_count[70];
+u64 eachexit_proc_cycles_count[71];
 EXPORT_SYMBOL(eachexit_proc_cycles_count);
 
 /*
