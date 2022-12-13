@@ -130,11 +130,26 @@ run sudo dmesg in GCP VM terminal to see the output
 
 ![ff1](https://user-images.githubusercontent.com/38378122/207185062-1ac99351-6a9b-418c-9227-b76a3bec65af.PNG)
 
-![ff2](https://user-images.githubusercontent.com/38378122/207185073-df1ffaa0-ba2b-42c1-ba17-3d9a4fd961bd.PNG)
+![ff2](https://user-images.githubusercontent.com/38378122/207185073-df1ffaa0-ba2b-42c1-ba17-3d9a4fd961bd.PNG) 
 
-
-##Question 3:
+## Question 3:
 Comment on the frequency of exits – does the number of exits increase at a stable rate? Or are there more exits performed during certain VM operations? Approximately how many exits does a full VM boot entail?
+
+### Answer: 
+
+The number of exits are increasing at a study rate for exit numbers 10 and 12.
+![image](https://user-images.githubusercontent.com/38378122/207193997-d0796baa-7db6-4f2b-b8d4-5df9456e71f6.png)
+
+![image](https://user-images.githubusercontent.com/38378122/207194365-72a80e15-38db-41a2-821d-2bf2c73ecf8f.png)
+
+
+## Question 4:
+Of the exit types defined in the SDM, which are the most frequent? Least?
+
+### Asnwer:
+
+The most Frequently called exit is Exit number- 30 (IO_INSTRUCTION). Total exits count=898930
+The least Frequently called exit is Exit number- 29 ( DR_ACCESS). Total exits count=1
 
 
 
