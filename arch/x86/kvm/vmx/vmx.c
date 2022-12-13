@@ -72,6 +72,8 @@ MODULE_LICENSE("GPL");
 
 extern u32 total_exits;
 extern u32 total_proc_cycles_time;
+extern s64 each_exit_reason_count[71];
+extern u64 eachexit_proc_cycles_count[71];
 #ifdef MODULE
 static const struct x86_cpu_id vmx_cpu_id[] = {
 	X86_MATCH_FEATURE(X86_FEATURE_VMX, NULL),
@@ -6285,14 +6287,16 @@ void dump_vmcs(struct kvm_vcpu *vcpu)
 static int __vmx_handle_exit(struct kvm_vcpu *vcpu, fastpath_t exit_fastpath)
 {	
 	
-	// Assignment 2 for Leafnode 0x4ffffffd 
-	u64 enter_rdtsc = rdtsc();
+	
 	struct vcpu_vmx *vmx = to_vmx(vcpu);
 	union vmx_exit_reason exit_reason = vmx->exit_reason;
 	u32 vectoring_info = vmx->idt_vectoring_info;
 	u16 exit_handler_index;
 	// Assignment 2 for 0x4FFFFFFC leafnode
 	total_exits = total_exits + 1;
+	if (exit_reason.basic < 70 ||
+		!(each_exit_reason_count[exit_reason.basic] < 0 ))
+	each_exit_reason_count[exit_reason.basic]++;
 	/*
 	 * Flush logged GPAs PML buffer, this will make dirty_bitmap more
 	 * updated. Another good is, in kvm_vm_ioctl_get_dirty_log, before
@@ -6450,12 +6454,12 @@ static int __vmx_handle_exit(struct kvm_vcpu *vcpu, fastpath_t exit_fastpath)
 	if (!kvm_vmx_exit_handlers[exit_handler_index])
 		goto unexpected_vmexit;
 	
-	//to calculate time spent in each exit_handler
-	total_proc_cycles_time = total_proc_cycles_time + (rdtsc() - enter_rdtsc);
 	
 	return kvm_vmx_exit_handlers[exit_handler_index](vcpu);
 
 unexpected_vmexit:
+	if (exit_reason.basic < 70 )
+	each_exit_reason_count[exit_reason.basic] = -1;
 	vcpu_unimpl(vcpu, "vmx: unexpected exit reason 0x%x\n",
 		    exit_reason.full);
 	dump_vmcs(vcpu);
@@ -6469,8 +6473,22 @@ unexpected_vmexit:
 }
 
 static int vmx_handle_exit(struct kvm_vcpu *vcpu, fastpath_t exit_fastpath)
-{
+{	
+	u16 exit_reason_basic;
+	u64 enter_rdtsc = rdtsc();
 	int ret = __vmx_handle_exit(vcpu, exit_fastpath);
+	
+	total_proc_cycles_time = total_proc_cycles_time + (rdtsc() - enter_rdtsc);
+
+	
+	// Time spent for each exit_handler
+		
+	exit_reason_basic = (u16)to_vmx(vcpu)->exit_reason.basic;
+	if(exit_reason_basic < 70) {
+	eachexit_proc_cycles_count[exit_reason_basic] = 
+			eachexit_proc_cycles_count[exit_reason_basic] +
+			(rdtsc() - enter_rdtsc);			
+	}
 
 	/*
 	 * Exit to user space when bus lock detected to inform that there is
